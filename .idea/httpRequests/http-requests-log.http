@@ -1,0 +1,9 @@
+GET https://sanctions.adb.org/sanctions/published
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2025.3.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2026-01-22T023446.404.html
+
+###
+
