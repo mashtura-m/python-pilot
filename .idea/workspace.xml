@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05fa54f6-3714-49f3-9347-a3a6678521b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RUN_FILE.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/cookies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python-pilot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scraperRunner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/scrapers/ADB_Sanctions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup_project.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/seleniumEngine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/products_page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/testScripts/Sauce_Demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +26,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mashtura-m"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mashtura-m/python-pilot&quot;,
+    &quot;accountId&quot;: &quot;e73d297f-ef76-4ec6-b4e1-947c15691eaa&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.venv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py" root0="SKIP_INSPECTION" />
   </component>
-  <component name="HttpClientOnboardingState"><![CDATA[{
-  "isOnboardingCommentShown": true
-}]]></component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -73,6 +76,7 @@
     "SHELLCHECK.PATH": "/home/user/.local/share/JetBrains/IntelliJIdea2025.3/Shell Script/shellcheck",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/user/Documents/Automation/java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -197,7 +201,8 @@
       <option name="presentableId" value="Default" />
       <updated>1769013499142</updated>
       <workItem from="1769013500249" duration="861000" />
-      <workItem from="1769014369669" duration="24145000" />
+      <workItem from="1769014369669" duration="24783000" />
+      <workItem from="1769192364637" duration="3041000" />
     </task>
     <servers />
   </component>
