@@ -1,12 +1,9 @@
-import logging
 import re
-import time
 
 import pandas as pd
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 
-from utils.seleniumEngine import create_webdriver, wait_for_element, wait_and_click
+from utils.seleniumEngine import *
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -45,7 +42,7 @@ def initParsing():
         driver.get(main_url)
 
         # Wait for page to load properly
-       # wait_for_element(driver, (By.CLASS_NAME, 'gap-xl'), 20, EC.visibility_of_element_located)
+        # wait_for_element(driver, (By.CLASS_NAME, 'gap-xl'), 20, EC.visibility_of_element_located)
         time.sleep(10)
         logger.info("Page loaded successfully.")
 
@@ -65,7 +62,7 @@ def initParsing():
 
             # Wait for table rows to load
             rows = wait_for_element(driver, (By.CSS_SELECTOR, 'table tbody tr'), 10,
-                EC.presence_of_all_elements_located)
+                                    EC.presence_of_all_elements_located)
 
             page_data = extract_row_data(rows)
             all_data.extend(page_data)
@@ -74,7 +71,7 @@ def initParsing():
             if page_count != 1:
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             wait_and_click(driver, (By.XPATH, "//button[./svg/path[contains(@d, 'M6.1584')]]"))
-            #//*[@id="__next"]/main/div/div[2]/div[2]/div[2]/div/button[3]
+            # //*[@id="__next"]/main/div/div[2]/div[2]/div[2]/div/button[3]
             page_count += 1
 
         df = pd.DataFrame(all_data)
@@ -86,10 +83,9 @@ def initParsing():
         raise
     finally:
         if driver:
-            driver.quit()
+            tear_down(driver)
 
 
 if __name__ == "__main__":
-    output_df= initParsing()
+    output_df = initParsing()
     logger.info(output_df.head())
-

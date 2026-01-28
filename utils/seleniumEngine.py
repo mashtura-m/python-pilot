@@ -31,7 +31,7 @@ def create_webdriver():
     return driver
 
 
-def wait_for_element(driver, locator, timeout,condition):
+def wait_for_element(driver, locator, timeout, condition):
     """Wait for an element to meet the given condition"""
     try:
         element = WebDriverWait(driver, timeout).until(condition(locator))
@@ -44,9 +44,9 @@ def wait_for_element(driver, locator, timeout,condition):
 
 
 # Wait and Click function
-def wait_and_click(driver,locator):
+def wait_and_click(driver, locator):
     """Wait for element to be clickable and click"""
-    element = wait_for_element(driver,locator,20, EC.element_to_be_clickable)
+    element = wait_for_element(driver, locator, 20, EC.element_to_be_clickable)
     element.click()
     logging.debug(f"Clicked on element: {locator}")
     return element
@@ -111,3 +111,7 @@ def load_cookies(driver):
         print(f"Cookie file '{filename}' not found.")
         # If cookies are not found, save the cookies (you could decide to save after login instead)
         save_cookies(driver, filename)
+
+
+def tear_down(driver):
+    driver.quit()
