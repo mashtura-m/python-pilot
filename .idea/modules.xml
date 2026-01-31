@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/python-pilot.iml" filepath="$PROJECT_DIR$/python-pilot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python-pilot-mode.iml" filepath="$PROJECT_DIR$/.idea/python-pilot-mode.iml" />
     </modules>
   </component>
 </project>

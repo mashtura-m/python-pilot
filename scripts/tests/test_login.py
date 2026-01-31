@@ -1,5 +1,6 @@
 import pytest
 from selenium.webdriver.common.by import By
+import pandas as pd
 
 from pages.login_page import Login_page
 from utils.seleniumEngine import create_webdriver
@@ -15,7 +16,11 @@ def set_up():
 
 def test_valid_login(set_up):
     (driver, login) = set_up
-    login.do_login("standard_user", "secret_sauce")
+    credentials = pd.read_csv("/home/user/Documents/Automation/python-pilot-mode/scripts/tests/creds.csv").to_dict(orient="records")
+    username=credentials[0]['username']
+    psw=credentials[0]['Pasword']
+    print(username, psw)
+    login.do_login(username, psw)
     test_title = "Swag Labs"
     assert driver.title == test_title, "Login Successful"
 
